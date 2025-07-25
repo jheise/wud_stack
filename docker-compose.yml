@@ -1,0 +1,12 @@
+services:
+  whatsupdocker:
+    image: getwud/wud
+    container_name: wud
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 3000:3000
+    environment:
+            - WUD_TRIGGER_DISCORD_NOTIFY_URL=https://discordapp.com/api/webhooks/1334777546910466058/6TiFFbPMx8voN0ec_SyZh8oeavBfqhmVmt4nXZZxgpgfC_Moiyf7ezwK0gyjjnWKhooP
+            - WUD_TRIGGER_DOCKER_REBUILD_AUTO=false
+
